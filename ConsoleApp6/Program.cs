@@ -14,12 +14,12 @@ namespace ConsoleApp5
             double x = 10;
             double n = 1;
             double res = 0;
-            Console.WriteLine(Task_5(x, n, res));
+            Console.WriteLine(Task_5(ref x, ref n, ref res));
 
             Console.ReadKey();
         }
 
-        static double Task_5(double x, double n, double res)
+        static double Task_5(ref double x, ref double n, ref double res)
         {
             for (n = 1; n < 10; n++)
             {
