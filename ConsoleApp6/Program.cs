@@ -23,7 +23,7 @@ namespace ConsoleApp5
         {
             for (n = 1; n < 10; n++)
             {
-                res = Math.Pow(x, n) / (n + x);
+                res = Math.Round(Math.Pow(x, n) / (n + x), 2); 
             }
             return res;
         }
