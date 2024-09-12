@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,8 +13,11 @@ namespace ConsoleApp5
         {
             double x = 10;
             double n = 1;
-            double res = 0;
-            Console.WriteLine(Task_5(ref x, ref n, ref res));
+            double res = 0, res_2 = 0;
+            int[] values = new int[10];
+
+            Console.WriteLine("Задача 5: " + Task_5(ref x, ref n, ref res));
+            Console.WriteLine("Задача 10: " + Task_10(values, res_2));
 
             Console.ReadKey();
         }
@@ -26,6 +29,37 @@ namespace ConsoleApp5
                 res = Math.Round(Math.Pow(x, n) / (n + x), 2); 
             }
             return res;
+        }
+
+        static double Task_10(int[] values, double res_2)
+        {
+            Console.WriteLine("Введите значения массива: ");
+            try
+            {
+                for (int i = 0; i < values.Length; i++)
+                {
+                    values[i] = Convert.ToInt32(Console.ReadLine());
+                }
+            }
+            catch
+            {
+                Console.WriteLine("Введите числа!");
+            }
+         
+            for (int i = 0; i < values.Length; i++)
+            {
+                if (values[i] < 0)
+                {
+                    res_2 += Convert.ToDouble(Math.Pow(values[i], 3));
+                    Console.WriteLine($"#{i} " + res_2);
+                }
+                else if (values[i] > 0)
+                {
+                    res_2 += Convert.ToDouble(Math.Pow(values[i], 2));
+                    Console.WriteLine($"#{i} " + res_2);
+                }
+            }
+            return res_2;
         }
     }
 }
