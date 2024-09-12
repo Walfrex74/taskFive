@@ -14,11 +14,12 @@ namespace ConsoleApp5
         {
             double x = 10;
             double n = 1;
-            double res = 0, res_2 = 0;
+            double res = 0;
             int[] values = new int[10];
 
             Console.WriteLine("Задача 5: " + Task_5(ref x, ref n, ref res));
-            Console.WriteLine("Задача 10: " + Task_10(values, res_2));
+            Console.WriteLine("Задача 10: ");
+            Task_10(values);
 
             Console.ReadKey();
         }
@@ -32,7 +33,7 @@ namespace ConsoleApp5
             return res;
         }
 
-        static double Task_10(int[] values, double res_2)
+        static void Task_10(int[] values)
         {
             bool p = true;
             while(p == true)
@@ -53,22 +54,23 @@ namespace ConsoleApp5
                     Console.ForegroundColor = ConsoleColor.White;
                 }
             }
-
-         
+     
             for (int i = 0; i < values.Length; i++)
             {
                 if (values[i] < 0)
                 {
-                    res_2 += Convert.ToDouble(Math.Pow(values[i], 3));
-                    Console.WriteLine($"#{i} " + res_2);
+                    values[i] = Convert.ToInt32(Math.Pow(values[i], 3));
                 }
                 else if (values[i] > 0)
                 {
-                    res_2 += Convert.ToDouble(Math.Pow(values[i], 2));
-                    Console.WriteLine($"#{i} " + res_2);
+                    values[i] = Convert.ToInt32(Math.Pow(values[i], 2));
                 }
             }
-            return res_2;
+
+            for (int i = 0; i < values.Length; i++) 
+            {
+                Console.WriteLine(values[i]);
+            }
         }
     }
 }
