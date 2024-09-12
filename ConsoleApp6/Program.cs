@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 
@@ -33,18 +34,26 @@ namespace ConsoleApp5
 
         static double Task_10(int[] values, double res_2)
         {
-            Console.WriteLine("Введите значения массива: ");
-            try
+            bool p = true;
+            while(p == true)
             {
-                for (int i = 0; i < values.Length; i++)
+                Console.WriteLine("Введите значения массива: ");
+                try
                 {
-                    values[i] = Convert.ToInt32(Console.ReadLine());
+                    for (int i = 0; i < values.Length; i++)
+                    {
+                        values[i] = Convert.ToInt32(Console.ReadLine());
+                    }
+                    p = false;
+                }
+                catch
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Введите числа!");
+                    Console.ForegroundColor = ConsoleColor.White;
                 }
             }
-            catch
-            {
-                Console.WriteLine("Введите числа!");
-            }
+
          
             for (int i = 0; i < values.Length; i++)
             {

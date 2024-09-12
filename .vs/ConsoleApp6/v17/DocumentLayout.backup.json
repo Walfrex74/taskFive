@@ -14,11 +14,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
@@ -28,7 +32,7 @@
               "RelativeDocumentMoniker": "ConsoleApp6\\Program.cs",
               "ToolTip": "C:\\Users\\Walfrex\\source\\repos\\ConsoleApp6\\ConsoleApp6\\Program.cs*",
               "RelativeToolTip": "ConsoleApp6\\Program.cs*",
-              "ViewState": "AgIAABUAAAAAAAAAAAAWwDQAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAAAowDEAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-06T03:55:52.62Z",
               "EditorCaption": ""
